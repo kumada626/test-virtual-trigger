@@ -1,0 +1,21 @@
+shared:
+  image: node:20
+jobs:
+  committer:
+    requires: ~commit
+    steps:
+      - echo
+  main:
+    annotations:
+      screwdriver.cd/virtualJob: true
+    requires: []
+    steps:
+      - echo
+  main2:
+    requires: main
+    steps:
+      - echo
+  main3:
+    requires: main
+    steps:
+      - echo
